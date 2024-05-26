@@ -5,6 +5,7 @@ import com.recursoshumanos.recursoshumanos.persistence.repository.AreaRepository
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.awt.geom.Area;
 import java.util.List;
 
 @Service
@@ -27,6 +28,10 @@ public class AreaService {
 
     public List<AreaEntity> getAllByEstado (Boolean estado) {
         return this.areaRepository.findAllByEstado(estado);
+    }
+
+    public AreaEntity saveArea (AreaEntity area) {
+        return this.areaRepository.save(area);
     }
 
 }

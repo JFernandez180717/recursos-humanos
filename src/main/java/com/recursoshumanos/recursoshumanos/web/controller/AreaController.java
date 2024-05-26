@@ -48,4 +48,14 @@ public class AreaController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @PostMapping("/editar")
+    public ResponseEntity<AreaEntity> saveArea (@RequestBody AreaEntity area) {
+        try {
+            return ResponseEntity.ok(this.areaService.saveArea(area));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }
