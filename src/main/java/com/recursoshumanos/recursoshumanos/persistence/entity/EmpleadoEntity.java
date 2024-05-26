@@ -55,5 +55,5 @@ public class EmpleadoEntity {
 
     @ManyToOne
     @JoinColumn(name = "idarea", referencedColumnName = "idarea", insertable = false, updatable = false)
-    private CargoEntity area;
+    private AreaEntity area;
 }
